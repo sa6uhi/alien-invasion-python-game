@@ -1,1 +1,1 @@
-# python-crash-course-book
+i'm reading book python crash course.
