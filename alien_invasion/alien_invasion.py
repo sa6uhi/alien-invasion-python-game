@@ -4,6 +4,7 @@ from settings import Settings
 from ship import Ship
 from bullet import Bullet
 
+
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
 
@@ -80,7 +81,7 @@ class AlienInvasion:
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
-    
+
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
         self.screen.fill(self.settings.bg_color)
@@ -89,7 +90,8 @@ class AlienInvasion:
         self.ship.blitme()
         pygame.display.flip()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # Make a game instance, and run the game.
     ai = AlienInvasion()
     ai.run_game()
