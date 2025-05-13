@@ -39,6 +39,9 @@ class AlienInvasion:
 
         self._create_fleet()
 
+        # Start Alien Invasion in an active state.
+        self.game_active = True
+
     def run_game(self):
         """Start the main loop for the game."""
         while True:
@@ -124,6 +127,9 @@ class AlienInvasion:
 
             # Pause.
             sleep(0.5)
+        else:
+            self.stats.game_active = False
+            # TODO pygame.mouse.set_visible(True)
 
     def _update_aliens(self):
         """Check if the fleet is at an edge, and then update positions."""
